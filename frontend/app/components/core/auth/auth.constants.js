@@ -13,7 +13,7 @@
       SERVER_ERROR: 500,
     })
     .constant('SECURITY', {
-      ACTIVATED: true,
+      ACTIVATED: false,
       ACCESS_TOKEN: 'JWTToken',
       REFRESH_TOKEN: 'RefreshToken',
       ACCESS_TOKEN_HEADER: 'authorization',
