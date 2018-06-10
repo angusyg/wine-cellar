@@ -56,7 +56,6 @@ function registerRefreshToken(user) {
  */
 service.login = infos => new Promise((resolve, reject) => {
   User.findOne({ login: infos.login })
-    .catch(err => reject(err))
     .then((user) => {
       if (!user) reject(new UnauthorizedAccessError('BAD_LOGIN', 'Bad login'));
       else {
@@ -74,7 +73,8 @@ service.login = infos => new Promise((resolve, reject) => {
           })
           .catch(err => reject(err));
       }
-    });
+    })
+    .catch(err => reject(err));
 });
 
 /**
