@@ -36,7 +36,7 @@ const crossOrigin = {
    * @param  {nextMiddleware}  callback  - Callback to pass control to next middleware
    */
   origin(origin, callback) {
-    const whitelistOrigins = [];
+    const whitelistOrigins = ['http://localhost:8080'];
     if (whitelistOrigins.length === 0) callback(null, true);
     else if (whitelistOrigins.indexOf(origin) !== -1) callback(null, true);
     else callback(new Error('Not allowed by CORS'));
