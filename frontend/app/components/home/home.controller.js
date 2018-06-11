@@ -12,5 +12,12 @@
 
   function HomeController() {
     const vm = this;
+
+    vm.search = '';
+    vm.navBarSearch = navBarSearch;
+
+    function navBarSearch() {
+      console.log(vm.search);
+    }
   }
 }());

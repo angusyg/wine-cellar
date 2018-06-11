@@ -66,13 +66,28 @@ body {
 /***************** Animation ****************/
 /******************* Forms ******************/
 .form-control {
-  background-color: rgba(217, 223, 232, 1);
+  background-color: $form-bg;
   border: 0;
+
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+.form-control:focus + .input-group-prepend {
+    color: #4183D7;
 }
 
 .input-group-text {
-  background-color: rgba(217, 223, 232, 1);
-  padding-top: 0;
-  padding-bottom: 0;
+  background-color: $form-bg;
+
+  &+.form-control:focus {
+    background-color: red;
+  }
+}
+.input-group:focus {
+  background-color: red;
+
+
 }
 /******************* Forms ******************/

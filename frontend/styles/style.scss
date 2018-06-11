@@ -1,3 +1,8 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'core';
 @import 'tooltip';
+
+#funkystyling {
+    background: white url(images/hello-world.png) right no-repeat;
+    padding-right: 17px;
+}
