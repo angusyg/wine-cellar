@@ -9,7 +9,10 @@
     .module('frontend.core.logging')
     .factory('httpErrorInterceptor', HttpErrorInterceptor);
 
-  HttpErrorInterceptor.$inject = ['$q', '$log'];
+  HttpErrorInterceptor.$inject = [
+    '$q',
+    '$log'
+  ];
 
   function HttpErrorInterceptor($q, $log) {
     return {

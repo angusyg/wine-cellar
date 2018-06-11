@@ -9,7 +9,10 @@
     .module('frontend.core.init')
     .controller('InitController', InitController);
 
-  InitController.$inject = ['$state', 'APP'];
+  InitController.$inject = [
+    '$state',
+    'APP'
+  ];
 
   function InitController($state, APP) {
     const vm = this;

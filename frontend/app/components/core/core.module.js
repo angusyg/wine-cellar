@@ -2,5 +2,14 @@
   'use strict';
 
   angular
-    .module('frontend.core', ['frontend.core.auth', 'frontend.core.constants', 'frontend.core.i18n', 'frontend.core.init', 'frontend.core.logging', 'frontend.core.resources', 'frontend.core.services', 'frontend.core.ui']);
+    .module('frontend.core', [
+      'frontend.core.auth',
+      'frontend.core.constants',
+      'frontend.core.i18n',
+      'frontend.core.init',
+      'frontend.core.logging',
+      'frontend.core.resources',
+      'frontend.core.services',
+      'frontend.core.ui'
+    ]);
 })();

@@ -9,7 +9,12 @@
     .module('frontend.core.auth')
     .directive('authDialog', AuthDialog);
 
-  AuthDialog.$inject = ['$state', '$uibModal', '$templateCache', 'AUTH_EVENTS'];
+  AuthDialog.$inject = [
+    '$state',
+    '$uibModal',
+    '$templateCache',
+    'AUTH_EVENTS'
+  ];
 
   function AuthDialog($state, $uibModal, $templateCache, AUTH_EVENTS) {
     return {
@@ -41,7 +46,12 @@
       scope.$on(AUTH_EVENTS.NOT_AUTHENTICATED, show);
     }
 
-    ModalController.$inject = ['$uibModalInstance', 'authService', '$timeout', 'PARAMETERS'];
+    ModalController.$inject = [
+      '$uibModalInstance',
+      'authService',
+      '$timeout',
+      'PARAMETERS'
+    ];
 
     function ModalController($uibModalInstance, authService, $timeout, PARAMETERS) {
       const vm = this;

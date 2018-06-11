@@ -9,7 +9,10 @@
     .module('frontend.core.auth')
     .factory('authInterceptor', AuthInterceptor);
 
-  AuthInterceptor.$inject = ['$q', '$injector'];
+  AuthInterceptor.$inject = [
+    '$q',
+    '$injector'
+  ];
 
   function AuthInterceptor($q, $injector) {
     let refreshRequestLoading = false;

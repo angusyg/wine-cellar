@@ -10,7 +10,17 @@
     .factory('authService', AuthService)
     .run(['authService', (authService) => authService.stateSecurization()]);
 
-  AuthService.$inject = ['$http', 'store', '$q', '$rootScope', '$transitions', 'helper', 'SECURITY', 'AUTH_EVENTS', 'API'];
+  AuthService.$inject = [
+    '$http',
+    'store',
+    '$q',
+    '$rootScope',
+    '$transitions',
+    'helper',
+    'SECURITY',
+    'AUTH_EVENTS',
+    'API'
+  ];
 
   function AuthService($http, store, $q, $rootScope, $transitions, helper, SECURITY, AUTH_EVENTS, API) {
     const LOGIN_ENDPOINT = `${API.URL}${API.BASE}/login`;
@@ -93,7 +103,7 @@
               $rootScope.$broadcast(AUTH_EVENTS.NOT_AUTHORIZED, trans);
               return false;
             }
-          }
+          } else return true;
         });
       }
     }
